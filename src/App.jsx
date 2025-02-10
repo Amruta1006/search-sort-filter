@@ -4,10 +4,19 @@ import { MapPin as MapPinIcon, Cake as CakeIcon, Search as SearchIcon } from "lu
 
 function App() {
   const [searchText, setSearchText] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedAge, setSelectedAge] = useState("");
 
-  const filteredUsers = USERS?.filter((user) =>
-    user.name.toLowerCase().includes(searchText.toLowerCase())
-  ) || [];
+  const uniqueCities = [...new Set(USERS.map((user) => user.city))];
+  const uniqueAges = [...new Set(USERS.map((user) => user.age))].sort((a, b) => a - b);
+
+  const filteredUsers = USERS?.filter((user) => {
+    return (
+      user.name.toLowerCase().includes(searchText.toLowerCase()) &&
+      (selectedCity ? user.city === selectedCity : true) &&
+      (selectedAge ? user.age === Number(selectedAge) : true)
+    );
+  }) || [];
 
   return (
     <div className="flex flex-col items-center p-6 bg-gray-300 min-h-screen">
@@ -15,16 +24,45 @@ function App() {
         Search, Sort, Filter:
       </h1>
 
-      <div className="relative w-[400px] mb-6">
-        <SearchIcon className="absolute left-3 top-3 text-gray-500" />
-        <input
-          type="text"
-          placeholder="Search users..."
-          className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={searchText} 
-          onChange={(e) => setSearchText(e.target.value)}
-        />
+      <div className="flex space-x-4 mb-6">
+        <div className="relative w-[300px]">
+          <SearchIcon className="absolute left-3 top-3 text-gray-500" />
+          <input
+            type="text"
+            placeholder="Search users..."
+            className="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </div>
+
+        <select
+          className="w-[150px] p-2 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={selectedCity}
+          onChange={(e) => setSelectedCity(e.target.value)}
+        >
+          <option value="">City</option>
+          {uniqueCities.map((city) => (
+            <option key={city} value={city}>{city}</option>
+          ))}
+        </select>
+
+        <select
+          className="w-[150px] p-2 rounded-lg border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          value={selectedAge}
+          onChange={(e) => setSelectedAge(e.target.value)}
+        >
+          <option value="">Age</option>
+          {uniqueAges.map((age) => (
+            <option key={age} value={age}>{age}</option>
+          ))}
+        </select>
       </div>
+
+    
+      <p className="text-lg text-gray-700 mb-4">
+        {searchText || selectedCity || selectedAge ? `Filtered users: ${filteredUsers.length}` : `Total users: ${USERS.length}`}
+      </p>
 
       <div className="flex flex-wrap justify-center">
         {filteredUsers.length > 0 ? (
