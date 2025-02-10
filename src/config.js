@@ -1,0 +1,186 @@
+const USERS = [
+    {
+      name: "Aarav Sharma",
+      city: "Delhi",
+      age: 25,
+      avatar: "https://i.pravatar.cc/150?img=1",
+    },
+    {
+      name: "Neha Verma",
+      city: "Mumbai",
+      age: 30,
+      avatar: "https://i.pravatar.cc/150?img=2",
+    },
+    {
+      name: "Rajesh Kumar",
+      city: "Bangalore",
+      age: 35,
+      avatar: "https://i.pravatar.cc/150?img=3",
+    },
+    {
+      name: "Amit Singh",
+      city: "Chennai",
+      age: 28,
+      avatar: "https://i.pravatar.cc/150?img=4",
+    },
+    {
+      name: "Suresh Reddy",
+      city: "Hyderabad",
+      age: 40,
+      avatar: "https://i.pravatar.cc/150?img=5",
+    },
+    {
+      name: "Sneha Joshi",
+      city: "Mumbai",
+      age: 33,
+      avatar: "https://i.pravatar.cc/150?img=6",
+    },
+    {
+      name: "Sneha Joshi",
+      city: "Ahmedabad",
+      age: 29,
+      avatar: "https://i.pravatar.cc/150?img=7",
+    },
+    {
+      name: "Deepika Iyer",
+      city: "Bangalore",
+      age: 31,
+      avatar: "https://i.pravatar.cc/150?img=8",
+    },
+    {
+      name: "Deepika Iyer",
+      city: "Kolkata",
+      age: 26,
+      avatar: "https://i.pravatar.cc/150?img=9",
+    },
+    {
+      name: "Manoj Pillai",
+      city: "Chennai",
+      age: 38,
+      avatar: "https://i.pravatar.cc/150?img=10",
+    },
+    {
+      name: "Priya Nair",
+      city: "Mumbai",
+      age: 29,
+      avatar: "https://i.pravatar.cc/150?img=11",
+    },
+    {
+      name: "Swati Choudhary",
+      city: "Delhi",
+      age: 32,
+      avatar: "https://i.pravatar.cc/150?img=12",
+    },
+    {
+      name: "Swati Choudhary",
+      city: "Jaipur",
+      age: 45,
+      avatar: "https://i.pravatar.cc/150?img=13",
+    },
+    {
+      name: "Meena Rao",
+      city: "Bangalore",
+      age: 28,
+      avatar: "https://i.pravatar.cc/150?img=14",
+    },
+    {
+      name: "Meena Rao",
+      city: "Chennai",
+      age: 36,
+      avatar: "https://i.pravatar.cc/150?img=15",
+    },
+    {
+      name: "Divya Agarwal",
+      city: "Delhi",
+      age: 27,
+      avatar: "https://i.pravatar.cc/150?img=16",
+    },
+    {
+      name: "Divya Agarwal",
+      city: "Pune",
+      age: 31,
+      avatar: "https://i.pravatar.cc/150?img=17",
+    },
+    {
+      name: "Tarun Sharma",
+      city: "Delhi",
+      age: 29,
+      avatar: "https://i.pravatar.cc/150?img=18",
+    },
+    {
+      name: "Tarun Sharma",
+      city: "Lucknow",
+      age: 33,
+      avatar: "https://i.pravatar.cc/150?img=19",
+    },
+    {
+      name: "Neeraj Dubey",
+      city: "Indore",
+      age: 39,
+      avatar: "https://i.pravatar.cc/150?img=20",
+    },
+    {
+      name: "Neeraj Dubey",
+      city: "Nagpur",
+      age: 37,
+      avatar: "https://i.pravatar.cc/150?img=21",
+    },
+    {
+      name: "Sarita Saxena",
+      city: "Varanasi",
+      age: 30,
+      avatar: "https://i.pravatar.cc/150?img=22",
+    },
+    {
+      name: "Sarita Saxena",
+      city: "Patna",
+      age: 35,
+      avatar: "https://i.pravatar.cc/150?img=23",
+    },
+    {
+      name: "Payal Deshmukh",
+      city: "Nagpur",
+      age: 32,
+      avatar: "https://i.pravatar.cc/150?img=24",
+    },
+    {
+      name: "Payal Deshmukh",
+      city: "Bangalore",
+      age: 40,
+      avatar: "https://i.pravatar.cc/150?img=25",
+    },
+    {
+      name: "Gopal Yadav",
+      city: "Ahmedabad",
+      age: 34,
+      avatar: "https://i.pravatar.cc/150?img=26",
+    },
+    {
+      name: "Gopal Yadav",
+      city: "Delhi",
+      age: 30,
+      avatar: "https://i.pravatar.cc/150?img=27",
+    },
+    {
+      name: "Anupama Menon",
+      city: "Chandigarh",
+      age: 26,
+      avatar: "https://i.pravatar.cc/150?img=28",
+    },
+    {
+      name: "Anupama Menon",
+      city: "Pune",
+      age: 28,
+      avatar: "https://i.pravatar.cc/150?img=29",
+    },
+    {
+      name: "Anil Kapoor",
+      city: "Jaipur",
+      age: 45,
+      avatar: "https://i.pravatar.cc/150?img=30",
+    },
+  ];
+
+  export {
+    USERS
+  };
